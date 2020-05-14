@@ -642,7 +642,7 @@ section.post {
 
 /* under post */
 .underPost {
-    padding: 0 150px;
+    padding: 0 100px;
     grid-column: 1/-1;
     height: 600px;
     width: 100%;
