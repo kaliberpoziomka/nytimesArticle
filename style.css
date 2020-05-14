@@ -1,1 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 1px dotted orange;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: #326891;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+:root {
+    --font: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+    background: orange;
+}
+
+
+/* sticky */
+.sticky {
+    position: fixed;
+    top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5.5vw;
+    padding-left: 5.5vw;
+    background: white;
+    height: auto;
+    width: 100vw;
+    border-bottom: 1px solid #e2e2e2;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    align-items: center;
+    z-index: 999;
+}
+
+.stickyIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+}
+
+.stickyIcons img {
+    width: 16px;
+    height: 16px;
+}
+
+.stickyIcons button {
+    border: 0;
+    border-radius: 3px;
+    background: none;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.stickyIcons button:hover {
+    background: rgba(0,0,0,0.03);
+}
+
+.stickyIcons span {
+    font-size: 14.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+.stickyIcons span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.stickyLogo {
+    justify-self: center;
+    align-self: center;
+}
+
+.stickyLogo img {
+    height: 26.5px;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+}
+
+.stickyButtons {
+    justify-self: end;
+    align-self: center;
+}
+
+.stickyButtons  button {
+    margin: 0;
+    background: #567b95;
+    border: 0;
+    border-radius: 3px;
+    padding: 10px 12px;
+    color: white;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+.stickyButtons button:hover {
+    background: #326891;
+}
+
+/* article */
+article {
+    width: 80vw;
+    height: auto;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    gap: 50px;
+}
+
+/* header */
+header {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+header h1 {
+    display: flex;
+    justify-items: left;
+    font-size: 2.5rem;
+    grid-column: 2/3;
+    font-family: 'Lobster', cursive, Arial, Helvetica;
+    font-weight: 400;
+}
+
+header figure {
+    margin: 0;
+    width: calc(600px + 36vw);
+    grid-column: 1/-1;
+}
+
+header figcaption {
+    color: #66668c;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+}
+
+header figcaption span {
+    color: #66668cab;
+    font-size: 0.8rem;
+}
+
+header img {
+    width: 100%;
+}
+
+/* post */
+section.post {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2/3;
+    gap: 30px;
+}
+
+/* post Header */
+.postHeader {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 25px;
+}
+
+.postHeader p {
+    margin: 0;
+    color: #292727;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    font-family: var(--font) ;
+}
+
+.postHeader span {
+    color: #292727;
+    text-decoration: underline #2927279d;
+    cursor: pointer;
+}
+
+.postHeader span:hover {
+    text-decoration: none;
+}
+
+.postHeader .postHeaderDown {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.postHeader .postHeaderDown p {
+    margin: 0;
+    font-weight: 300;
+    color: #333333;
+    font-size: 0.8rem;
+}
+
+.postHeader .postHeaderButtons {
+    justify-self: end;
+}
+
+.postHeaderButtons button {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 2px solid #eeeeee;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+}
+
+.postHeaderButtons button:hover {
+    background: rgba(255,255,255, 0.1)
+}
+
+.postHeaderButtons img {
+    width: 10px;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+/* post TEXT */
+.postText, .postTextAfter {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-template-columns: subgrid;
+    gap: 20px;
+}
+
+.postText p, .postTextAfter p {
+    grid-column: 2/3;
+    margin: 0;
+    font-size: 1.40rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    color: #222121;
+    line-height: 1.875rem;
+
+}
+
+.postText p:nth-child(4) {
+    margin-bottom: 10px;
+}
+
+.postText span {
+    justify-self: center;
+    width: auto;
+    text-align: center;
+}
+
+.postText span p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.postText span a {
+    margin: 0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.postText span::before, .postText span::after {
+    display: block;
+    text-align: center;
+    content: '';
+    width: 50%;
+    margin: 15px auto;
+    height: 1px;
+    background: rgba(51, 51, 51, 0.315);
+}
+
+.postText span::after {
+    margin-top: 25px;
+}
+
+.postText h2, .postTextAfter h2 {
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* post theory table */
+.theoryTable {
+    width: 945px;
+    grid-column: 2/3;
+    position: relative;
+    left: -172.5px;
+    margin-bottom: 70px;
+}
+
+.theoryTable h3 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.45rem;
+    line-height: 1.125rem;
+    font-weight: 900;
+}
+
+.theoryTable small {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 300;
+    color: rgba(102, 102, 85, 0.74);
+}
+
+.theoryTableContent {
+    margin-top: 10px;
+    height: 576px;
+    width: 100%;
+    background: url(images/inflation-945.png);
+    background-position: bottom;
+    background-size: contain;
+    padding-top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 8.8rem);
+    gap: 150px 15px
+}
+
+.theoryTableContent p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.739);
+}
+
+.theoryTableContent span {
+    margin-right: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+    color: black;
+}
+
+.theoryTableContent span.theoryTableEnd {
+    grid-column: span 2;
+    font-size: .85rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.25rem;
+    letter-spacing: 0.01rem;
+    position: relative;
+    top: -5.8rem;
+    color: #222;
+}
+
+.theoryTableEnd::before {
+    display: block;
+    content: '';
+    width: 15%;
+    height: 1px;
+    background: rgba(14, 13, 13, 0.808);
+    margin-bottom: 20px;
+}
+
+/* after table */
+.postTextAfter h2 {
+    margin: 0;
+}
+
+/* video */
+.underVideo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #555;
+}
+
+/* photo */
+.postTextAfter figure {
+    margin: 0;
+    grid-column: 2/3;
+    width: 720px;
+    position: relative;
+    left: -60px;
+}
+
+.postTextAfter figure img {
+    margin: 0;
+    width: 100%;
+}
+
+.postTextAfter figcaption {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #555;
+}
+
+/* end post */
+.postTextAfter p.endPostText {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: rgba(85, 85, 85, 0.739);
+}
+
+.endPostText small span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.endPostText small span:hover {
+    text-decoration: none;
+}
+
+/* end buttons */
+.endPostButtons {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.endPostButtons > button {
+    background: rgba(50, 104, 145, 0.808);
+    border: 0;
+    border-radius: 3px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: white;
+    padding: 9px 100px;
+    transition: 0.6s;
+}
+
+.endPostButtons > button:hover {
+    background: rgb(50, 104, 145);
+}
+
+.leftEndButtons {
+    justify-self: right;
+}
+
+.leftEndButtons button {
+    margin-left: 10px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 2px solid #eeeeee;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+}
+
+.leftEndButtons button:hover {
+    background: rgba(255,255,255, 0.1)
+}
+
+.leftEndButtons button img {
+    width: 15px;
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 0;
+    margin: auto;
+}
+
+
+/* under post */
+.underPost {
+    padding: 0 150px;
+    grid-column: 1/-1;
+    height: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px 30px;
+}
+
+.underTitle1, .underTitle2 {
+    padding-top: 20px;
+    border-top: 1px solid black;
+}
+
+.underTitle1 span, .underTitle2 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9125rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.underTitle1 span:hover, .underTitle2 span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.underContentLeft {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-auto-rows: auto;
+    gap: 15px 15px;
+}
+
+.underContent1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.underContent1 img {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.underContent1 small {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(85, 85, 85, 0.52);
+}
+
+.underContentLeft .underTitle1 {
+    grid-column: 1/-1;
+}
+
+.underContent2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(153, 153, 153, 0.534);
+}
+
+.underContent2 span, .underContent1 span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.underContent2 span:hover, .underContent1 span:hover {
+    color: #777;
+    cursor: pointer;
+}
+
+.credit, .credit a {
+    color: #999;
+}
+
+/* footer */
+footer {
+    grid-column: 1/-1;
+    margin-top: 50px;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+.footerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid rgba(119, 119, 119, 0.253);
+}
+
+.footerTitle span {
+    cursor: pointer;
+    font-size: 0.6rem;
+    color: #326891;
+}
+
+footer img {
+    width: 180px;
+}
+
+.footerColumns::before {
+    grid-column: 1/-1;
+    display: block;
+    content: '';
+    background: rgba(153, 153, 153, 0.2);
+    height: 2px;
+    width: 100%;
+    position: relative;
+    top: -42px;
+}
+
+.footerColumns {
+    grid-row: 2/3;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 4fr) 5fr;
+}
+
+.footerColumns h4 {
+    font-size: 13px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footerColumns p {
+    margin: 12px 0;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.footerColumns p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footerColumnEnd {
+    margin-left: 30px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.footerColumnEnd p {
+    display: flex;
+    align-items: center;
+}
+
+.footerColumnEnd img {
+    width: 17px;
+    margin-right: 10px;
+}
+
+.footerColumnEnd span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.smallSubscribe {
+    margin-top: 28px;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.smallSubscribe p, .smallSubscribeLanguages p {
+    font-size: 0.7rem;
+    color: #333;
+}
+
+.smallSubscribeLanguages {
+    margin-top: 28px;
+}
+
+.footerBottomLinks, .footerBottomLinks2 {
+    grid-column: 1/-1;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: auto;
+    border-top: 1px solid rgba(153, 153, 153, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footerBottomLinks span, .footerBottomLinks2 span {
+    font-size: 0.7rem;
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 5px 10px;
+    color: #777;
+}
+
+.footerBottomLinks span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footerBottomLinks2 {
+    border: 0;
+}
