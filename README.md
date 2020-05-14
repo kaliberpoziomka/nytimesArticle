@@ -2,6 +2,9 @@ Project made thanks to https://www.theodinproject.com/
 
 Read fantastic article about space exploration at https://kaliberpoziomka.github.io/nytimesArticle/
 
+The goal was to copy NYT article at 
+https://www.nytimes.com/2014/03/18/science/space/detection-of-waves-in-space-buttresses-landmark-theory-of-big-bang.html?_r=0
+
 See other students solution at https://www.theodinproject.com/lessons/positioning-and-floating-elements
 
 From this project I:
