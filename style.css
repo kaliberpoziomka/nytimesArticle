@@ -41,6 +41,11 @@ a:hover {
     background: orange;
 }
 
+@media (max-device-width: 600px) {
+    .none {
+        display: none;
+    }
+}
 
 /* sticky */
 .sticky {
@@ -64,6 +69,13 @@ a:hover {
     z-index: 999;
 }
 
+@media (max-device-width: 600px) {
+    .sticky {
+        height: 70px;
+        grid-template-columns: 500px 1fr;
+    };
+};
+
 .stickyIcons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -75,9 +87,28 @@ a:hover {
     width: 250px;
 }
 
+@media (max-device-width: 600px) {
+    .stickyIcons {
+        width: 500px;
+        display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    }
+}
+
 .stickyIcons img {
     width: 16px;
     height: 16px;
+}
+
+@media (max-device-width: 600px) {
+    .stickyIcons img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .stickyIcons button {
@@ -93,6 +124,15 @@ a:hover {
     cursor: pointer;
 }
 
+@media (max-device-width: 600px) {
+    .stickyIcons button {
+            width: 50px;
+            height: 50px;
+    }
+}
+
+
+
 .stickyIcons button:hover {
     background: rgba(0,0,0,0.03);
 }
@@ -102,6 +142,13 @@ a:hover {
     font-size: 14.5px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
+}
+
+@media (max-device-width: 600px) {
+    .stickyIcons span {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
 }
 
 .stickyIcons span:hover {
@@ -127,12 +174,24 @@ a:hover {
         align-content: center;
 }
 
+@media (max-device-width: 600px) {
+    .stickyLogo img {
+        height: 60px;
+    }
+}
+
 .stickyButtons {
     -ms-grid-column-align: end;
         justify-self: end;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+}
+
+@media (max-device-width: 600px) {
+    .stickyButtons {
+        display: none;
+    }
 }
 
 .stickyButtons  button {
@@ -201,6 +260,15 @@ header h1 {
     font-weight: 400;
 }
 
+@media (max-device-width: 600px) {
+    header h1 {
+        -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/-1;
+    font-size: 3.2rem;
+    }
+}
+
 header figure {
     margin: 0;
     width: calc(600px + 36vw);
@@ -213,9 +281,23 @@ header figcaption {
     line-height: 1.25rem;
 }
 
+@media (max-device-width: 600px) {
+    header figcaption {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+}
+
 header figcaption span {
     color: #66668cab;
     font-size: 0.8rem;
+}
+
+@media (max-device-width: 600px) {
+    header figcaption span {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
 }
 
 header img {
@@ -234,6 +316,15 @@ section.post {
     gap: 30px 0;
 }
 
+@media (max-device-width: 600px) {
+    section.post {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        grid-column: 1/-1;
+        width: 100%;
+    }
+}
+
 /* post Header */
 .postHeader {
     display: -ms-grid;
@@ -241,6 +332,12 @@ section.post {
     -ms-grid-rows: auto 25px auto;
     grid-template-rows: repeat(2, auto);
     gap: 25px;
+}
+
+@media (max-device-width: 600px) {
+    .postHeader {
+        grid-column: 1/-1;
+    }
 }
 
 .postHeader p {
@@ -279,6 +376,15 @@ section.post {
     font-size: 0.8rem;
 }
 
+@media (max-device-width: 600px) {
+    .post .postHeader p {
+        font-size: 1.8rem;
+    }
+    .post .postHeaderDown p {
+        font-size: 1.5rem;
+    }
+}
+
 .postHeader .postHeaderButtons {
     -ms-grid-column-align: end;
         justify-self: end;
@@ -294,6 +400,14 @@ section.post {
     cursor: pointer;
 }
 
+@media (max-device-width:600px) {
+    .postHeaderButtons button {
+        width: 60px;
+        height: 60px;
+        margin-left: 15px;
+    }
+}
+
 .postHeaderButtons button:hover {
     background: rgba(255,255,255, 0.1)
 }
@@ -303,6 +417,12 @@ section.post {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
+}
+
+@media (max-device-width: 600px) {
+    .postHeaderButtons img {
+        width: 30px;
+    }
 }
 
 /* post TEXT */
@@ -319,6 +439,25 @@ section.post {
     grid-template-columns: 1fr 600px 1fr;
     gap: 20px 0;
 }
+
+@media (max-device-width: 600px) {
+    .postText {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        grid-column: 1/-1;
+        -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    }
+    .postTextAfter {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        grid-column: 1/-1;
+        -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+    }
+}
+
 .postText > *:nth-child(1), .postTextAfter > *:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -336,6 +475,14 @@ section.post {
     color: #222121;
     line-height: 1.875rem;
 
+}
+
+@media (max-device-width:600px) {
+    .postText p,
+    .postTextAfter p {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
 }
 
 .postText p:nth-child(4) {
@@ -366,6 +513,18 @@ section.post {
     cursor: pointer;
 }
 
+@media (max-device-width:600px) {
+    .postText span a, .postText span p {
+        font-size: 2rem;
+    }
+    .postText span{
+        margin: 20px 0;
+        padding-top: 2px;
+        border-top: 1px solid rgba(255,255,255,0.0001);
+        border-bottom: 1px solid rgba(255,255,255,0.0001);
+    }
+}
+
 .postText span::before, .postText span::after {
     display: block;
     text-align: center;
@@ -385,6 +544,16 @@ section.post {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 1.5rem;
+}
+
+@media (max-device-width:600px) {
+    .postText h2, .postTextAfter h2 {
+        padding-top: 50px;
+        font-size: 2.5rem;
+    }
+    .postTextAfter h2 {
+        grid-column: span 2;
+    }
 }
 
 /* post theory table */
@@ -537,6 +706,17 @@ section.post {
 }
 
 /* video */
+
+@media (max-device-width: 600px) {
+    iframe {
+        width: 100%;
+        height: 450px;
+    }
+    span.underVideo {
+        font-size: 2rem;
+    }
+}
+
 .underVideo {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
@@ -555,6 +735,13 @@ section.post {
     left: -60px;
 }
 
+@media (max-device-width: 600px) {
+    .postTextAfter figure {
+        left: 0;
+        width: 100%;
+    }
+}
+
 .postTextAfter figure img {
     margin: 0;
     width: 100%;
@@ -567,6 +754,13 @@ section.post {
     color: #555;
 }
 
+@media (max-device-width: 600px) {
+    .postTextAfter figcaption {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
 /* end post */
 .postTextAfter p.endPostText {
     margin: 0;
@@ -574,6 +768,14 @@ section.post {
     font-size: 1rem;
     line-height: 1rem;
     color: rgba(85, 85, 85, 0.739);
+}
+
+@media (max-device-width:600px) {
+    .postTextAfter p.endPostText {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    
 }
 
 .endPostText small span {
@@ -596,6 +798,12 @@ section.post {
             align-items: center;
 }
 
+@media (max-device-width:600px) {
+.endPostButtons {
+    grid-column: span 2;
+}
+}
+
 .endPostButtons > button {
     background: rgba(50, 104, 145, 0.808);
     border: 0;
@@ -607,6 +815,12 @@ section.post {
     -webkit-transition: 0.6s;
     -o-transition: 0.6s;
     transition: 0.6s;
+}
+
+@media (max-device-width: 600px) {
+    .endPostButtons > button {
+        font-size: 1.5rem;
+    }
 }
 
 .endPostButtons > button:hover {
@@ -640,6 +854,17 @@ section.post {
     margin: auto;
 }
 
+@media (max-device-width: 600px) {
+    .leftEndButtons button {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+    }
+    .leftEndButtons button img {
+        width: 30px;
+        height: 30px;
+    }
+}
 
 /* under post */
 .underPost {
@@ -655,6 +880,13 @@ section.post {
     grid-template-rows: auto 1fr;
     gap: 20px 30px;
 }
+
+@media (max-device-width: 600px) {
+    .underPost {
+        padding: 0;
+    }
+}
+
 .underPost > *:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -677,11 +909,18 @@ section.post {
     border-top: 1px solid black;
 }
 
+
 .underTitle1 span, .underTitle2 span {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9125rem;
     font-weight: 700;
     text-decoration: none;
+}
+
+@media (max-device-width: 600px) {
+.underTitle1 span, .underTitle2 span {
+    font-size: 2rem;
+}
 }
 
 .underTitle1 span:hover, .underTitle2 span:hover {
@@ -739,6 +978,26 @@ section.post {
     color: #222;
 }
 
+@media (max-device-width: 600px) {
+    .underContent1 span {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+
+    .underContent2 span { 
+        font-size: 1.5rem;
+        flex-shrink: 2rem;
+    }
+
+    .underContent2 small, .underContent1 small {
+        font-size: 1.5rem;
+    }
+
+    .underContentRight > * {
+        border: 0;
+    }
+}
+
 .underContent2 span:hover, .underContent1 span:hover {
     color: #777;
     cursor: pointer;
@@ -747,6 +1006,7 @@ section.post {
 .credit, .credit a {
     color: #999;
 }
+
 
 /* footer */
 footer {
@@ -784,6 +1044,15 @@ footer img {
     width: 180px;
 }
 
+@media (max-device-width: 600px) {
+    footer img {
+        width: 250px;
+    }
+    .footerTitle span {
+        font-size: 1.5rem;
+    }
+}
+
 .footerColumns::before {
     grid-column: 1/-1;
     display: block;
@@ -804,6 +1073,23 @@ footer img {
     display: grid;
     -ms-grid-columns: (4fr)[5] 5fr;
     grid-template-columns: repeat(5, 4fr) 5fr;
+}
+
+@media (max-device-width: 600px) {
+    .footerColumns {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footerColumns p {
+        display: inline-block;
+        width: auto;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    footer .footerColumns h4 {
+        font-size: 1.5rem;
+    }
 }
 
 .footerColumns h4 {
@@ -830,6 +1116,27 @@ footer img {
     margin-left: 30px;
     padding-left: 10px;
     border-left: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+@media (max-device-width:600px) {
+    .footerColumnEnd {
+        margin: 0;
+        padding: 0;
+        border-left: 0;
+    }
+    .footerColumnEnd p,
+    .footerColumnEnd p span {
+        font-size: 1.5rem;
+    }
+    footer .footerColumnEnd p {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+    }
+    .footerColumnEnd p img {
+        width: 30px;
+    }
+
 }
 
 .footerColumnEnd p {
@@ -887,6 +1194,12 @@ footer img {
     font-family: Helvetica, Arial, sans-serif;
     padding: 5px 10px;
     color: #777;
+}
+
+@media (max-device-width: 600px) {
+    .footerBottomLinks span, .footerBottomLinks2 span {
+        font-size: 1.3rem;
+    }
 }
 
 .footerBottomLinks span:hover {
