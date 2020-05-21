@@ -1,3 +1,5 @@
+## NYT Article copy using Grid
+
 Project made thanks to https://www.theodinproject.com/
 
 Read fantastic article about space exploration at https://kaliberpoziomka.github.io/nytimesArticle/
